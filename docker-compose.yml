@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  fasttext:
+    build: .
+    container_name: fasttext_lang_detect
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true

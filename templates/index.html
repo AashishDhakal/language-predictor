@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Detection</title>
+</head>
+<body>
+    <h1>Enter Text for Language Detection</h1>
+    <form method="POST">
+        <textarea name="text_input" rows="5" cols="40" placeholder="Type your text here..."></textarea><br>
+        <button type="submit">Detect Language</button>
+    </form>
+
+    {% if text %}
+        <h2>Result:</h2>
+        <p><strong>Text:</strong> {{ text }}</p>
+        <p><strong>Predicted Language:</strong> {{ language }}</p>
+        <p><strong>Confidence:</strong> {{ confidence }}</p>
+    {% endif %}
+</body>
+</html>
